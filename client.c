@@ -83,7 +83,7 @@ void client_select_events(struct WM_t *W, struct wmclient *C)
                 GrabModeAsync, GrabModeSync, None, None);
 
     /* Alt-Tab */
-    grabkey(W, C, XK_Tab, Mod1Mask);
+    grabkey(W, C, XK_Tab, Mod4Mask);
     /* Shift-alt-enter for menu */
     grabkey(W, C, XK_Return, ShiftMask | Mod1Mask);
     /* Shift-alt-F for fullscreen */

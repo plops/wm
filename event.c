@@ -224,7 +224,7 @@ static void event_key_pressed(struct WM_t *W, struct wmclient *C, XEvent *ev)
     /* Border size */
     int B = W->prefs.bw;
     KeySym sym = XLookupKeysym(&(ev->xkey), 0);
-    if (sym == XK_Tab && (ev->xkey.state & Mod1Mask))
+    if (sym == XK_Tab && (ev->xkey.state & Mod4Mask))
         switcher(W);
     
     if (ev->xkey.state & (Mod1Mask | ShiftMask))

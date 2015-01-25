@@ -36,8 +36,8 @@ static int switcher_key_event(struct WM_t *W, XEvent *ev)
     KeySym sym = XLookupKeysym(&(ev->xkey), 0);
 
     /* Alt released so focus the selected window and quit the switcher */
-    if (!(ev->xkey.state & Mod1Mask) ||
-        (ev->type == KeyRelease && sym == XK_Alt_L))
+    if (!(ev->xkey.state & Mod4Mask) ||
+        (ev->type == KeyRelease && sym == XK_Super_L))
     {
         client_focus(W, W->clients[currently_selected]);
         return -1;
